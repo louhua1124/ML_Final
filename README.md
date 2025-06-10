@@ -1,0 +1,1 @@
+使用 TensorFlow FCN與 CNN進比較MNIST手寫數字分類的訓練模型
