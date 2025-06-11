@@ -382,9 +382,6 @@ def main():
     # 準備用於交叉驗證的數據集 (使用完整的訓練集，但這次使用 hold_out 函數來獲取更均勻的數據分割)
     # 為了演示交叉驗證，我們使用 hold_out 將 total_images 和 total_labels 分割成一個用於交叉驗證的訓練集
     # 以及一個驗證集。這裡選擇用 90% 的數據進行交叉驗證。
-    # 請注意：交叉驗證會多次呼叫 train_and_test_cnn，每次訓練一個新的模型。
-    # 每次呼叫 train_and_test_cnn 都會顯示一次該折疊的訓練圖表。
-    # 如果您不希望看到這麼多圖表，可以在 train_and_test_cnn 中將繪圖部分註釋掉，或者在 cross_validation_cnn 中處理圖表邏輯。
     print("\n[*] Performing Cross Validation (Using CNN model)")
     cv_train_images, cv_train_labels, _, _ = hold_out(total_images, total_labels, 0.9) # Use 90% for CV training set
 
